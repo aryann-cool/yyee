@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift App - Welcome</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: -50px; /* Moves text upward */
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient colors */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Makes gradient text visible */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green color for buttons */
+            color: #fff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to our Gift App</h1>
+    <div class="button-container">
+        <button onclick="window.location.href='login.html'">Login</button>
+        <button onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+    <div class="footer">Thunda Gifts</div>
+</body>
+</html>
